@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62, 5%;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.d-flexbox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-flex {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  padding: 8px 3px;
+  margin: 10px;
+  background-color: rgb(207, 203, 203);
+  border: 4px solid yellow;
+  border-radius: 10px;
+}
+
+.order-ticket, .order-ticket2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px auto 0 auto;
+  background-color: gainsboro;
+}
+.order-ticket div span, .order-ticket2 div span {
+  font-size: 1rem;
+}
+
+.order-ticket2 {
+  margin: 1px auto;
+  background-color: rgb(194, 190, 190);
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 20px auto;
+}
+
+div span.direction {
+  font-size: 1.1rem;
+  margin: 5px;
+}
+div svg {
+  fill: yellow;
+  width: 30px;
+  padding: 5px;
+}
+
+button {
+  border: 2px yellow solid;
+  border-radius: 10px;
+  padding: 7px;
+  margin: 5px;
+  background-color: rgb(207, 203, 203);
+}
+button a {
+  text-decoration: none;
+  color: black;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+footer {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+}
+footer p {
+  margin: auto 15px;
+}
+
+/*# sourceMappingURL=main.css.map */
