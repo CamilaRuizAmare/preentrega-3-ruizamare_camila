@@ -35,9 +35,6 @@ nav {
 }
 
 .order-ticket, .order-ticket2 {
-  display: flex;
-  justify-content: space-around;
-  margin: 25px auto 0 auto;
   background-color: gainsboro;
 }
 .order-ticket div span, .order-ticket2 div span {
