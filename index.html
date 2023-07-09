@@ -23,7 +23,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Inicio
+                      Planeamiento Operativo
                     </a>
                     <ul class="dropdown-menu">
                       <li>
@@ -48,7 +48,7 @@
                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                   <button class="btn" type="submit">Ir</button>
                 </form>
-                <a href="">
+                <a href="./pages/inicio_sesion.html">
                     <img src="./img/icon-user.png" alt="">
                 </a>
               </div>
@@ -64,40 +64,50 @@
 <!-- ends header -->
     <main>
         <section class="d-flexbox">
-          <div class="button-flex">
-            <button type="button" class="btn">
+<!--           <div class="button-flex"> -->
+            <button type="button" id="total_button" class="btn button-flex" >
                 Total <span class="text-dark">4</span>
             </button>
-          </div>
-          <div class="button-flex">
-            <button type="button" class="btn">
+<!--           </div> -->
+<!--           <div class="button-flex"> -->
+            <button type="button" class="btn button-flex">
                 Asignados en tiempo <span class="text-dark">4</span>
             </button>
-          </div>
-          <div class="button-flex">
-            <button type="button" class="btn">
+ <!--          </div>
+          <div class="button-flex"> -->
+            <button type="button" class="btn button-flex">
                 Sin asignar <span class="text-dark">4</span>
             </button>
-          </div>
-          <div class="button-flex">
-            <button type="button" class="btn">
+<!--           </div>
+          <div class="button-flex"> -->
+            <button type="button" class="btn button-flex">
                 Vencidos <span class="text-dark">4</span>
             </button>
-          </div>
-          <div class="button-flex">
-            <button type="button" class="btn">
+ <!--          </div> -->
+<!--           <div class="button-flex"> -->
+            <button type="button" class="btn button-flex">
                 Mis asignados <span class="text-dark">4</span>
             </button>
-          </div>
-          <div class="button-flex">
-            <button type="button" class="btn">
+<!--           </div> -->
+<!--           <div class="button-flex"> -->
+            <button type="button" class="btn button-flex">
                 Mis asignados vencidos <span class="text-dark">4</span>
             </button>
-          </div>
+<!--           </div> -->
         </section>
-        <div class="d-flexbox">
-          <button>
-            <a href="#">
+        <div class="d-flexbox my-4">
+          <button id="prueba">
+            <a href="./pages/nueva_cuenta.html">
+              Cargar nueva cuenta
+            </a>
+          </button>
+          <button id="prueba">
+            <a href="./pages/consulta_cuentas.html">
+              Consultar cuentas
+            </a>
+          </button>
+          <button id="prueba">
+            <a href="./pages/nuevo_form.html">
               Crear nuevo ticket
             </a>
           </button>
@@ -112,7 +122,7 @@
             </a>
           </button>
         </div>
-        <section class="my-5 p-4 text-center">
+        <section class="p-4 text-center">
           <table class="table">
             <thead>
               <tr class="order-ticket">
@@ -127,49 +137,8 @@
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="order-ticket2">
-                <th>1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr>
-              <tr class="order-ticket2">
-                <th>1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr><tr class="order-ticket2">
-                <th>1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr><tr class="order-ticket2">
-                <th>1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr>
+            <tbody id="contenedorTabla" class="table-group-divider">
+              
             </tbody>
           </table>
         </section>
@@ -200,5 +169,7 @@
     </footer>
 <!-- ends footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="./js/class_cuentas.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -17,32 +17,53 @@ nav {
   left: 0;
 }
 
+.contenedor {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .d-flexbox {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+
 .button-flex {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 30%;
-  padding: 8px 3px;
+  padding: 15px 3px;
   margin: 10px;
   background-color: rgb(207, 203, 203);
   border: 4px solid yellow;
   border-radius: 10px;
 }
 
-.order-ticket, .order-ticket2 {
-  background-color: gainsboro;
+.img {
+  display: flex;
 }
-.order-ticket div span, .order-ticket2 div span {
-  font-size: 1rem;
+
+span.text-dark {
+  padding-left: 8px;
+}
+
+.order-ticket, .order-ticket2 {
+  height: 50px;
+  background-color: gainsboro;
+  justify-content: center;
 }
 
 .order-ticket2 {
-  margin: 1px auto;
+  height: 40px;
   background-color: rgb(194, 190, 190);
   align-items: center;
 }
@@ -72,6 +93,24 @@ button {
 button a {
   text-decoration: none;
   color: black;
+}
+
+.error {
+  color: #9c2626;
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.realizado {
+  color: #18983f;
+  background-color: rgba(47, 221, 99, 0.5);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.display {
+  display: none;
 }
 
 .pages {
