@@ -88,9 +88,7 @@ function visualizarBusqueda(){
 }
 
 function resetTabla(){
-    consultaGerencia.addEventListener('keypress', () => {
-        mostrarTabla.innerHTML = '';
-    })
+    mostrarTabla.innerHTML = '';
 }
 
 let filtroDeCuentas;
@@ -112,8 +110,9 @@ botonEnviar.addEventListener('click', (e) => {
 
 botonBusqueda.addEventListener('click', (e) => {
     e.preventDefault();
+    resetTabla();
     validacionBusqueda();
     resetForm(formularioBusqueda);
-    //resetTabla();
+    
     //Ver de que manera incluir un bucle o cómo hacer para que al cargar la info ok no haya problema. VER!!!!
 })
