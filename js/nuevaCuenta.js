@@ -1,14 +1,5 @@
-const cuentas = [
-    bhCob = new Cuenta('Banco Hipotecario', 'Cobranzas', 'Formosa', 'Cristian Zozaya', 'Lizzie Ruiz Diaz'),
-    bhCust = new Cuenta('Banco Hipotecario', 'Customer', 'Formosa', 'Cristian Zozaya', 'Lizzie Ruiz Diaz'),
-    claro611 = new Cuenta('Claro', 'Customer', 'Cordoba', 'Carolina Simes', 'Emilse Copetti'),
-    claroMora = new Cuenta('Claro', 'Cobranzas', 'Cordoba', 'Carolina Simes', 'Martin Cappuozzo'),
-    claroTec = new Cuenta('Claro', 'Retencion', 'Cordoba', 'Carolina Simes', 'Karina Lizzama'),
-    telecom = new Cuenta('Telecom', 'Customer', 'Buenos Aires', 'Fabian Perezlindo', 'Natalie Manduci'),
-    cruzDelSur = new Cuenta('Cruz del Sur', 'Customer', 'Buenos Aires', 'Fabian Perezlindo', 'Paola Makuch'),
-    tnCobranzasCba = new Cuenta('Tarjeta Naranja', 'Cobranzas', 'Córdoba', 'Cristian Zozaya', 'Mario Quinteros'),
-    tnCobranzasFsa = new Cuenta('Tarjeta Naranja', 'Cobranzas', 'Formosa', 'Cristian Zozaya', 'Mario Quinteros'),
-];
+let cuentas = JSON.parse(localStorage.getItem('cuentas')) || [];
+
 
 const formularioCuentas = document.getElementById('form-nuevaCuenta');
 const formularioBusqueda = document.getElementById('formBusqueda');
@@ -23,7 +14,7 @@ const divResultado = document.getElementById('resultadoError');
 const divDatoForm = document.getElementById('avisoDatos');
 const consultaGerencia = document.getElementById('nombreConsultaGerencia');
 const mostrarTabla = document.getElementById('tablaInfo');
-
+let filtroDeCuentas;
 
 function agregarCuenta (){
     nuevaCuenta = new Cuenta (nombreCuenta.value, nombreCampaña.value, nombrePlaza.value, nombreGerencia.value, nombreJefatura.value);
@@ -63,15 +54,18 @@ function avisoCuentaCreada(){
 }
 
 function avisoSinDatos(){
+    divResultado.classList.remove('display');
     divResultado.innerHTML = `
     <div class="text-center w-50">
         <p class="error">Búsqueda Erronea. Por favor ingrese el nombre correctamente.</p>
     </div>
     `
+    mostrarTabla.classList.add('display');
 }
 
+const mostrarBusqueda = document.getElementById('mostrarBusqueda');
+
 function visualizarBusqueda(){
-    const mostrarBusqueda = document.getElementById('mostrarBusqueda');
     mostrarTabla.classList.remove('display');
     filtroDeCuentas.forEach((cliente) => {
         mostrarBusqueda.innerHTML = mostrarBusqueda.innerHTML + 
@@ -85,19 +79,19 @@ function visualizarBusqueda(){
                     </tr>
                     `
     })
+    divResultado.classList.add('display');
 }
 
 function resetTabla(){
-    mostrarTabla.innerHTML = '';
+    mostrarBusqueda.innerHTML = '';
 }
-
-let filtroDeCuentas;
 
 function validacionBusqueda(){
     filtroDeCuentas = cuentas.filter((cliente) => {return cliente.gerencia === consultaGerencia.value});
     filtroDeCuentas.length > 0 ? visualizarBusqueda() : avisoSinDatos();
 }
 
+//desde el evento Click se valida la información cargada en el form, se actualiza el array en el localStorage y se vuelve a retornar. 
 
 botonEnviar.addEventListener('click', (e) => {
     e.preventDefault();
@@ -107,12 +101,10 @@ botonEnviar.addEventListener('click', (e) => {
     traerDeLocalStorage();
 });
 
-
+//desde el evento Click se valida si el nombre ingresado es correcto (o no) y en consecuencia actua mostrando un msj de error o dibujando una tabla con la información correspondiente a la búsqueda. 
 botonBusqueda.addEventListener('click', (e) => {
     e.preventDefault();
     resetTabla();
     validacionBusqueda();
     resetForm(formularioBusqueda);
-    
-    //Ver de que manera incluir un bucle o cómo hacer para que al cargar la info ok no haya problema. VER!!!!
 })
