@@ -29,11 +29,21 @@ nav {
   flex-wrap: wrap;
 }
 
-.formulario {
+.formulario, .formulario2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 400px;
+}
+
+.formulario2 {
+  width: 100%;
+  margin: 50px;
+}
+
+.spacing {
+  padding: 5px auto;
+  margin: 10px;
 }
 
 .button-flex {

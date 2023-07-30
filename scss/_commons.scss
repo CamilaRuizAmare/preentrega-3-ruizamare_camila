@@ -28,6 +28,14 @@ nav{
     justify-content: center;
     width: 400px;
 }
+.formulario2{
+    @extend.formulario;
+    width: 100%;
+    margin: 50px;
+}
+.spacing{
+    @include spacing (5px auto, 10px);
+}
 .button-flex{
     display: flex;
     justify-content: center;
