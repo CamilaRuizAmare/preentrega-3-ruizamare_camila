@@ -1,0 +1,107 @@
+[
+    {
+        "cliente": "Banco Hipotecario",
+        "campaña": "Customer",
+        "plaza": "Formosa",
+        "gerencia": "Cristian Zozaya",
+        "jefatura": "Lizzie Ruiz Diaz"
+    },
+    {
+        "cliente": "Banco Hipotecario",
+        "campaña": "Cobranzas",
+        "plaza": "Formosa",
+        "gerencia": "Cristian Zozaya",
+        "jefatura": "Lizzie Ruiz Diaz"
+    },
+    {
+        "cliente": "Claro",
+        "campaña": "Cobranzas",
+        "plaza": "Cordoba",
+        "gerencia": "Carolina Simes",
+        "jefatura": "Martin Cappuozzo"
+    },
+    {
+        "cliente": "Claro",
+        "campaña": "Ventas",
+        "plaza": "Córdoba",
+        "gerencia": "Carolina Simes",
+        "jefatura": "Martin Cappuozzo"
+    },
+    {
+        "cliente": "Claro",
+        "campaña": "Customer",
+        "plaza": "Córdoba",
+        "gerencia": "Carolina Simes",
+        "jefatura": "Emilse Copetti"
+    },
+    {
+        "cliente": "Telecom",
+        "campaña": "Customer",
+        "plaza": "Buenos Aires",
+        "gerencia": "Fabian Perezlindo",
+        "jefatura": "Deborah Giacopponi"
+    },
+    {
+        "cliente": "Cruz del sur",
+        "campaña": "Customer",
+        "plaza": "Buenos Aires",
+        "gerencia": "Fabian Perezlindo",
+        "jefatura": "Paola Makuch"
+    },
+    {
+        "cliente": "Tarjeta Naranja",
+        "campaña": "Cobranzas",
+        "plaza": "Córdoba",
+        "gerencia": "Cristian Zozaya",
+        "jefatura": "Facundo Pacheco"
+    },
+    {
+        "cliente": "Tarjeta Naranja",
+        "campaña": "Cobranzas",
+        "plaza": "Formosa",
+        "gerencia": "Cristian Zozaya",
+        "jefatura": "Facundo Pacheco"
+    },
+    {
+        "cliente": "Tarjeta Naranja",
+        "campaña": "Cobranzas",
+        "plaza": "Paraguay",
+        "gerencia": "Cristian Zozaya",
+        "jefatura": "Facundo Pacheco"
+    },
+    {
+        "cliente": "Bayer",
+        "campaña": "Customer",
+        "plaza": "Buenos Aires",
+        "gerencia": "Marcelo Berazategui",
+        "jefatura": "Patricio Dasso"
+    },
+    {
+        "cliente": "Bayer",
+        "campaña": "Customer",
+        "plaza": "Paraguay",
+        "gerencia": "Marcelo Berazategui",
+        "jefatura": "Patricio Dasso"
+    },
+    {
+        "cliente": "Galicia",
+        "campaña": "Customer",
+        "plaza": "Córdoba",
+        "gerencia": "Marcelo Berazategui",
+        "jefatura": "Gabriela Ronco"
+    },
+    {
+        "cliente": "Galicia",
+        "campaña": "Customer",
+        "plaza": "Buenos Aires",
+        "gerencia": "Marcelo Berazategui",
+        "jefatura": "Patricio Amarilla"
+    },
+    {
+        "cliente": "Pedidos Ya",
+        "campaña": "Customer",
+        "plaza": "Paraguay",
+        "gerencia": "Fabian Perezlindo",
+        "jefatura": "Natalie Manduci"
+    }
+]

@@ -1,5 +1,3 @@
-let cuentas = JSON.parse(localStorage.getItem('cuentas')) || [];
-
 const formularioCuentas = document.getElementById('form-nuevaCuenta');
 const formularioBusqueda = document.getElementById('formBusqueda');
 const nombreCuenta = document.getElementById('nombreCuenta');
@@ -13,8 +11,9 @@ const divResultado = document.getElementById('resultadoError');
 const consultaGerencia = document.getElementById('nombreConsultaGerencia');
 const mostrarTabla = document.getElementById('tablaInfo');
 let filtroDeCuentas;
+let cuentas = [];
 
-//Se muestra la información cargada por el usuario para confirmar la creación del nuevo dato
+//Se simula la creacion de una nueva cuenta. 
 function agregarCuenta() {
     Swal.fire({
         title: 'Usted esta por crear la siguiente cuenta',
@@ -39,20 +38,11 @@ function agregarCuenta() {
             timer: 2500,
             timerProgressBar: true,
           })
-            nuevaCuenta = new Cuenta(nombreCuenta.value, nombreCampaña.value, nombrePlaza.value, nombreGerencia.value, nombreJefatura.value);
-            cuentas.push(nuevaCuenta);
             resetForm(formularioCuentas);
-            subirALocalStorage();
-            traerDeLocalStorage();
             }
           });
         }
 
-function confirmacionUsuario() {
-    Swal.fire({
-        titleText: '¿Desea guardar la nueva cuenta?'
-    })
-}
 
 function validarCuenta() {
     const camposForm = nombreCuenta.value != '' && nombreCampaña.value != '' && nombrePlaza.value != '' && nombreGerencia.value != '' && nombreJefatura.value != '';
@@ -63,24 +53,16 @@ function resetForm(form) {
     form.reset();
 }
 
-function subirALocalStorage() {
-    localStorage.setItem('cuentas', JSON.stringify(cuentas));
-}
-
-function traerDeLocalStorage() {
-    JSON.parse(localStorage.getItem('cuentas'));
-}
-
 function avisoDatosIncompletos() {
     Swal.fire({
         icon: 'warning',
         title: 'Información incompleta',
         text: 'Uno o más campos se encuentran vacios',
         confirmButtonText: 'Volver',
-        confirmButtonColor: '#C2BEBE',
         buttonsStyling: false,
       })
 }
+
 
 //Crea un div informando que no se encontraron datos en la búsqueda
 function avisoSinDatos() {
@@ -117,12 +99,30 @@ function resetTabla() {
     mostrarBusqueda.innerHTML = '';
 }
 
-function validacionBusqueda() {
+async function cargarCuentas() {
+    const response = await fetch('../cuentas.json');
+    if(response.ok) {
+        cuentas = await response.json();
+    } else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Lo sentimos',
+            text: 'En este momento no pudimos procesar su solicitud, por favor intente más tarde',
+            confirmButtonText: 'Volver',
+            buttonsStyling: false,
+          })
+    }
+    
+};
+
+//se valida la busqueda realizada y muestra la información correspondiente con la busqueda
+async function validacionBusqueda() {
+    await cargarCuentas();
     filtroDeCuentas = cuentas.filter((cliente) => { return cliente.gerencia === consultaGerencia.value });
     filtroDeCuentas.length > 0 ? visualizarBusqueda() : avisoSinDatos();
-}
+};
 
-//desde el evento Click se valida la información cargada en el form, se actualiza el array en el localStorage y se vuelve a retornar. 
+//desde el evento Click se valida la información cargada en el form y se simula su carga en una base de datos
 
 botonEnviar.addEventListener('click', (e) => {
     e.preventDefault();
@@ -130,9 +130,9 @@ botonEnviar.addEventListener('click', (e) => {
 });
 
 //desde el evento Click se valida si el nombre ingresado es correcto (o no) y en consecuencia actua mostrando un msj de error o dibujando una tabla con la información correspondiente a la búsqueda. 
-botonBusqueda.addEventListener('click', (e) => {
+botonBusqueda.addEventListener('click', async (e) => {
     e.preventDefault();
     resetTabla();
-    validacionBusqueda();
+    await validacionBusqueda();
     resetForm(formularioBusqueda);
-})
+});

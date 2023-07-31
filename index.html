@@ -65,26 +65,9 @@
       </h1>
     </header>
 <!-- ends header -->
-    <main>
-        <section class="d-flexbox">
-            <button type="button" id="total_button" class="btn button-flex" >
-                Total <span class="text-dark">4</span>
-            </button>
-            <button type="button" class="btn button-flex">
-                Asignados en tiempo <span class="text-dark">4</span>
-            </button>
-            <button type="button" class="btn button-flex">
-                Sin asignar <span class="text-dark">4</span>
-            </button>
-            <button type="button" class="btn button-flex">
-                Vencidos <span class="text-dark">4</span>
-            </button>
-            <button type="button" class="btn button-flex">
-                Mis asignados <span class="text-dark">4</span>
-            </button>
-            <button type="button" class="btn button-flex">
-                Mis asignados vencidos <span class="text-dark">4</span>
-            </button>
+    <main id="mainTicketera">
+        <section id="sectionTicketera">
+            
         </section>
         <div class="d-flexbox my-4">
           <button>
@@ -92,8 +75,8 @@
               Cargar nueva cuenta
             </a>
           </button>
-          <button>
-            <a href="./pages/nuevo_form.html">
+          <button id="nuevoTicket">
+            <a href="#">
               Crear nuevo ticket
             </a>
           </button>
@@ -110,25 +93,15 @@
         </div>
         <section class="p-4 text-center">
           <table class="table">
-            <thead>
-              <tr class="order-ticket">
-                <th scope="col">ID</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Área</th>
-                <th scope="col">Categoría</th>
-                <th scope="col">Asunto</th>
-                <th scope="col">Realizado por:</th>
-                <th scope="col">Asignado a:</th>
-                <th scope="col">Acciones</th>
-              </tr>
+            <thead id="cabeceraTabla">
+              
             </thead>
             <tbody id="contenedorTabla" class="table-group-divider">
               
             </tbody>
           </table>
         </section>
-        <section class="d-flex pages">
+<!--         <section class="d-flex pages">
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
@@ -141,7 +114,7 @@
               <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
             </svg>
           </div>
-        </section>
+        </section> -->
     </main>
 <!-- ends main -->
     <aside>
