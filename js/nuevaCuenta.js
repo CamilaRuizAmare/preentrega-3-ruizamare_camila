@@ -10,6 +10,7 @@ const botonBusqueda = document.getElementById('btnBusqueda');
 const divResultado = document.getElementById('resultadoError');
 const consultaGerencia = document.getElementById('nombreConsultaGerencia');
 const mostrarTabla = document.getElementById('tablaInfo');
+const mostrarBusqueda = document.getElementById('mostrarBusqueda');
 let filtroDeCuentas;
 let cuentas = [];
 
@@ -74,8 +75,6 @@ function avisoSinDatos() {
     `
     mostrarTabla.classList.add('display');
 }
-
-const mostrarBusqueda = document.getElementById('mostrarBusqueda');
 
 //Se crea una tabla con los clientes de la gerencia buscada
 function visualizarBusqueda() {

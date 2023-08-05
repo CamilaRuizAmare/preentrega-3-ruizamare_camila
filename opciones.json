@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "option": "Cambio de CC"
+    },
+    {
+        "id": 2,
+        "option": "Cambio de vacaciones"
+    },
+    {
+        "id": 3,
+        "option": "Cambio de TL"
+    },
+    {
+        "id": 4,
+        "option": "Modificación de contrato"
+    },
+    {
+        "id": 5,
+        "option": "Solicitud de Personal"
+    }
+]
